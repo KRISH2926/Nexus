@@ -1,0 +1,54 @@
+.parent-portal {
+  min-height: 100vh;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+  background: #f6f7fc;
+  color: #20243a;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+.parent-header, .parent-section__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.parent-header { max-width: 1240px; margin: 0 auto 2rem; }
+.parent-header h1, .parent-section h2 { margin: .35rem 0; letter-spacing: -.04em; }
+.parent-header p, .parent-student-card p, .parent-notification-list p, .parent-gatepass-list p { margin: .3rem 0; color: #737991; }
+.parent-kicker { color: #5146e5; font-size: .7rem; font-weight: 800; letter-spacing: .13em; }
+.parent-secondary, .parent-link-form button {
+  border: 0; border-radius: .7rem; padding: .75rem 1rem; background: #5146e5; color: #fff; font-weight: 700; cursor: pointer;
+}
+.parent-secondary { background: #fff; color: #5146e5; border: 1px solid #dfe1f0; }
+.parent-section { max-width: 1240px; margin: 0 auto 1.25rem; padding: clamp(1rem, 3vw, 1.7rem); border: 1px solid #e7e9f2; border-radius: 1rem; background: #fff; box-shadow: 0 12px 34px rgb(42 39 91 / 5%); }
+.parent-section__heading { margin-bottom: 1rem; }
+.parent-section__heading > span { color: #737991; font-size: .85rem; }
+.parent-student-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: .8rem; }
+.parent-student-card { display: flex; align-items: center; gap: .8rem; padding: 1rem; border: 1px solid #eceef5; border-radius: .8rem; }
+.parent-student-card h3 { margin: 0; }
+.parent-student-card__avatar { display: grid; width: 2.8rem; height: 2.8rem; flex: 0 0 auto; place-items: center; border-radius: 50%; background: #efedff; color: #5146e5; font-weight: 800; }
+.parent-link-form { display: grid; gap: .55rem; max-width: 580px; margin-top: 1.4rem; }
+.parent-link-form label { font-weight: 700; font-size: .9rem; }
+.parent-link-form > div { display: flex; gap: .5rem; }
+.parent-link-form input { min-width: 0; flex: 1; padding: .7rem; border: 1px solid #dfe2ec; border-radius: .65rem; font: inherit; }
+.parent-link-form small, .parent-delivery-note { color: #737991; line-height: 1.55; }
+.parent-content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; max-width: 1274px; margin: auto; }
+.parent-content-grid .parent-section { width: 100%; }
+.parent-notification-list, .parent-gatepass-list { display: grid; gap: .65rem; padding: 0; margin: 0; list-style: none; }
+.parent-notification-list li, .parent-gatepass-list li { display: flex; justify-content: space-between; align-items: flex-start; gap: .8rem; padding: .85rem 0; border-bottom: 1px solid #eceef5; }
+.parent-notification-list li.is-read { opacity: .65; }
+.parent-notification-list time, .parent-gatepass-list time { color: #858aa0; font-size: .75rem; }
+.parent-email-status { display: block; margin: .25rem 0; color: #737991; font-size: .75rem; text-transform: capitalize; }
+.parent-text-button { border: 0; padding: .3rem; background: transparent; color: #5146e5; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.parent-status { padding: .3rem .55rem; border-radius: 999px; background: #f2f1ff; color: #5146e5; font-size: .72rem; font-weight: 750; text-transform: capitalize; white-space: nowrap; }
+.parent-status--rejected { background: #fff0ed; color: #a33c2b; }
+.parent-status--approved { background: #e6f8f1; color: #17785e; }
+.parent-status--parent_pending { background: #fff4dc; color: #825b10; }
+.parent-campus-status { color: #5146e5 !important; font-size: .82rem; }
+.parent-decision-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
+.parent-decision-actions button { min-height: 40px; padding: .55rem .8rem; border: 0; border-radius: .6rem; background: #5146e5; color: #fff; font-weight: 700; cursor: pointer; }
+.parent-decision-actions .parent-reject-button { background: #fff; color: #a33c2b; border: 1px solid #f0c7bf; }
+.parent-empty { color: #737991; }
+.parent-error { padding: .8rem; border-radius: .7rem; background: #fff0ed; color: #a33c2b; }
+.parent-notice { padding: .8rem; border-radius: .7rem; background: #e6f8f1; color: #17785e; }
+@media (max-width: 800px) { .parent-content-grid { grid-template-columns: 1fr; gap: 0; } }
+@media (max-width: 520px) { .parent-header, .parent-section__heading { align-items: flex-start; } .parent-header h1 { font-size: 1.65rem; } .parent-link-form > div { flex-direction: column; } .parent-link-form button { min-height: 44px; } }

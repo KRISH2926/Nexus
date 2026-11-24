@@ -1,0 +1,117 @@
+.vng-animated-button {
+  position: relative;
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.85rem;
+  background: #5146e5;
+  color: #fff;
+  font: inherit;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.vng-animated-button:hover {
+  background: #4238ce;
+  box-shadow: 0 8px 24px rgb(81 70 229 / 20%);
+  transform: translateY(-1px);
+}
+
+.vng-animated-button:focus-visible,
+.vng-faq button:focus-visible {
+  outline: 3px solid #ff806b;
+  outline-offset: 3px;
+}
+
+.vng-animated-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.vng-animated-button__shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 35%, rgb(255 255 255 / 24%) 50%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform 480ms ease;
+}
+
+.vng-animated-button:hover .vng-animated-button__shine {
+  transform: translateX(120%);
+}
+
+.vng-animated-button > span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.vng-faq {
+  width: min(100%, 800px);
+  margin-inline: auto;
+}
+
+.vng-faq__title {
+  margin: 0 0 2rem;
+  color: #20243a;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  text-align: center;
+}
+
+.vng-faq__item {
+  border-bottom: 1px solid #e6e8f1;
+}
+
+.vng-faq__question {
+  margin: 0;
+}
+
+.vng-faq__question button {
+  display: flex;
+  width: 100%;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0.2rem;
+  border: 0;
+  background: transparent;
+  color: #20243a;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 650;
+  text-align: left;
+  cursor: pointer;
+}
+
+.vng-faq__icon {
+  color: #5146e5;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.vng-faq__answer {
+  color: #737991;
+  line-height: 1.7;
+}
+
+.vng-faq__answer p {
+  margin: 0;
+  padding: 0 2rem 1.25rem 0.2rem;
+}
+
+.vng-faq__answer[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vng-animated-button,
+  .vng-animated-button__shine {
+    transition: none;
+  }
+}
